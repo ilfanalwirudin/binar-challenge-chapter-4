@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  margin: 0;
+  color: white;
+  letter-spacing: 0.1em;
+  box-sizing: border-box;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-family: "Bebas Neue";
+  font-size: 80px;
+}
+
+h2 {
+  font-family: "Bebas Neue";
+  font-size: 36px;
+}
+
+h3 {
+  font-family: "Bebas Neue";
+  font-size: 24px;
+}
+
+h4 {
+  font-family: "open sans";
+  font-size: 18px;
+  color: yellow;
+}
+
+h5 {
+  font-family: "open sans";
+  font-size: 18px;
+}
+
+p {
+  font-family: "open sans";
+  font-size: 14px;
+}
+
+.main {
+  height: 150vh;
+  background-image: url(assets/main-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.games {
+  height: 150vh;
+  background-image: url(assets/the-games-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.features {
+  height: 150vh;
+  background-image: url(assets/features.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.requirements {
+  height: 150vh;
+  background-image: url(assets/requirements.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.scores {
+  height: 150vh;
+  background-image: url(assets/top-score-bg.png);
+  background-size: cover;
+  background-position: center;
+}
+.news {
+  height: 150vh;
+  background-image: url(assets/newsletter.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.skull {
+  background-image: url(assets/skull.png);
+  display: flex;
+  height: auto;
+  width: auto;
+}
