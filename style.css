@@ -14,18 +14,38 @@
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 75vh;
+  top: 50vh;
   width: 97vw;
   text-align: center;
+}
+
+.swipe {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.btn {
+  font-weight: bold;
+  padding: 1rem 5rem;
 }
 
 .vertical-bottom {
   display: flex;
   position: absolute;
   bottom: 0;
-  top: 130vh;
+  top: 135vh;
   width: 97vw;
   justify-content: center;
+}
+
+.scroll-down {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 97%;
+  align-items: center;
 }
 
 h1 {
@@ -105,4 +125,8 @@ p {
   display: flex;
   height: auto;
   width: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
