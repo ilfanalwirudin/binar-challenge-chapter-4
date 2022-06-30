@@ -28,7 +28,24 @@
 }
 .btn {
   font-weight: bold;
-  padding: 1rem 5rem;
+  padding: 1rem 3rem;
+  color: black;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-footer {
+  padding-top: 15rem;
+  max-width: 90%;
+  margin-left: 5%;
+  align-items: center;
+}
+
+.footer-menu {
+  margin-left: 10%;
+  padding-left: 10%;
 }
 
 .vertical-bottom {
@@ -36,6 +53,14 @@
   position: absolute;
   bottom: 0;
   top: 135vh;
+  width: 97vw;
+  justify-content: center;
+}
+
+.vertical-footer-bottom {
+  display: flex;
+  position: absolute;
+  top: 40vh;
   width: 97vw;
   justify-content: center;
 }
@@ -86,7 +111,7 @@ p {
   background-position: center;
 }
 
-.games {
+.about {
   height: 150vh;
   background-image: url(assets/the-games-bg.jpg);
   background-size: cover;
@@ -107,7 +132,7 @@ p {
   background-position: center;
 }
 
-.scores {
+.quotes {
   height: 150vh;
   background-image: url(assets/top-score-bg.png);
   background-size: cover;
@@ -121,10 +146,8 @@ p {
 }
 
 .skull {
-  background-image: url(assets/skull.png);
   display: flex;
-  height: auto;
-  width: auto;
+  padding-left: 15rem;
 }
 
 ::-webkit-scrollbar {
