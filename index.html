@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      card-name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Setim</title>
     <link rel="shortcut icon" href="assets/icon.ico" />
     <link
@@ -75,7 +78,7 @@
         <div class="container">
           <div class="vertical-center">
             <h1>PLAY TRADITIONAL GAME</h1>
-            <h3>Experience new traditional game play</h3>
+            <p class="p-title">Experience new traditional game play</p>
             <br />
             <button
               type="button"
@@ -84,6 +87,7 @@
               PLAY NOW
             </button>
           </div>
+          <!-- story -->
           <div class="vertical-bottom">
             <div class="scroll-down" align="center">
               <h6>THE STORY</h6>
@@ -95,6 +99,7 @@
     </div>
     <!--Page 2-->
     <div id="about" class="about">
+      <!-- grid 1 -->
       <div class="container">
         <div class="row">
           <div class="col-4 pt-5 ps-5">
@@ -103,20 +108,15 @@
           <div class="col"></div>
         </div>
       </div>
+      <!-- grid 2 -->
       <div class="container">
         <div class="row">
           <div class="col-4 ps-5">
             <h2>THE GAMES</h2>
           </div>
-          <div class="col-1 ps-5">
-            <div class="swipe ps-5">
-              <a href="#carouselExampleIndicators"
-                ><img src="assets/switch-left.svg" alt=""
-              /></a>
-            </div>
-          </div>
+          <div class="col-1 ps-5"></div>
 
-          <div class="col ms-1">
+          <div class="col">
             <!--Carousel start-->
             <div
               id="carouselExampleIndicators"
@@ -144,9 +144,35 @@
                   data-bs-slide-to="2"
                   aria-label="Slide 3"
                 ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="4"
+                  aria-label="Slide 5"
+                ></button>
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
+                  <img
+                    src="assets/rockpaperstrategy-1600.jpg"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/rockpaperstrategy-1600.jpg"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
                   <img
                     src="assets/rockpaperstrategy-1600.jpg"
                     class="d-block w-100"
@@ -174,35 +200,39 @@
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev"
               >
-                <span
+                <img
+                  class="swipe-control-left pe-5 me-5"
+                  src="assets/switch-left.svg"
+                  alt="previous"
+                />
+                <!-- <span
                   class="carousel-control-prev-icon"
                   aria-hidden="true"
-                ></span>
+                ></span> -->
                 <span class="visually-hidden">Previous</span>
               </button>
               <button
-                class="carousel-control-next"
+                class="carousel-control-next ps-5"
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="next"
               >
-                <span
+                <img
+                  class="swipe-control-right ps-5 ms-5"
+                  src="assets/switch-right.svg"
+                  alt="next"
+                />
+                <!-- <span
                   class="carousel-control-next-icon"
                   aria-hidden="true"
                 ></span>
-                <span class="visually-hidden">Next</span>
+                <span class="visually-hidden">Next</span> -->
               </button>
             </div>
             <!--Carousel end-->
           </div>
           <!-- swipe -->
-          <div class="col-1 ps-0">
-            <div class="swipe">
-              <a href="#carouselExampleIndicators"
-                ><img src="assets/switch-right.svg" alt=""
-              /></a>
-            </div>
-          </div>
+          <div class="col-1 ps-0"></div>
           <!-- swipe -->
         </div>
       </div>
@@ -297,77 +327,149 @@
     </div>
     <!--Page 5-->
     <div id="quotes" class="pt-5">
-      <h2>TOP SCORES</h2>
-      <p>This top scores from various games provided in this platform</p>
-      <button
-        type="button"
-        class="btn btn-warning btn-outline-success px-5 rounded-1"
-      >
-        See more
-      </button>
-
-      <div class="cards">
-        <div class="container">
-          <div class="row-xs">
-            <div class="col bg-dark">Column</div>
-          </div>
-          <div class="row-xs">
-            <div class="col bg-dark">Column</div>
-          </div>
-          <div class="row-xs">
-            <div class="col bg-dark">Column</div>
+      <div class="container container-score">
+        <h2>TOP SCORES</h2>
+        <p>This top scores from various games provided in this platform</p>
+        <button
+          type="button"
+          class="btn btn-warning btn-outline-success rounded-1"
+        >
+          See more
+        </button>
+      </div>
+      <!-- card -->
+      <div class="top-score ps-5 ms-5">
+        <div class="card">
+          <div class="card-body">
+            <div class="main-card">
+              <div class="profile">
+                <img src="assets/evan-lahti.jpg" alt="#" />
+              </div>
+              <div class="card-name">
+                <h4 class="card-title">
+                  Evan Lahti<img
+                    class="card-twitter ms-5"
+                    src="assets/twitter-card.png"
+                    alt=""
+                  />
+                </h4>
+                <h5 class="card-subtitle mb-2 text-secondary">PC Gamer</h5>
+              </div>
+            </div>
+            <p class="card-text">"One of my gaming highlights of the year."</p>
+            <p class="card-text">
+              <small class="text-secondary">June 18, 2021</small>
+            </p>
           </div>
         </div>
       </div>
+      <br />
+      <div class="top-score">
+        <div class="card">
+          <div class="card-body">
+            <div class="main-card">
+              <div class="profile">
+                <img src="assets/jada-griffin.jpg" alt="#" />
+              </div>
+              <div class="card-name">
+                <h4 class="card-title">
+                  Jada Griffin<img
+                    class="card-twitter ms-4"
+                    src="assets/twitter-card.png"
+                    alt=""
+                  />
+                </h4>
+                <h5 class="card-subtitle mb-2 text-secondary">Nerdreactor</h5>
+              </div>
+            </div>
+            <p class="card-text">
+              "The next big thing in the world of streaming and survival games."
+            </p>
+            <p class="card-text">
+              <small class="text-secondary">July 10, 2021</small>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <div class="top-score ps-5 ms-5">
+        <div class="card">
+          <div class="card-body">
+            <div class="main-card">
+              <div class="profile">
+                <img src="assets/aaron-williams.jpg" alt="#" />
+              </div>
+              <div class="card-name">
+                <h4 class="card-title">
+                  Aaron Williams<img
+                    class="card-twitter"
+                    src="assets/twitter-card.png"
+                    alt=""
+                  />
+                </h4>
+                <h5 class="card-subtitle mb-2 text-secondary">Uproxx</h5>
+              </div>
+            </div>
+            <p class="card-text">
+              "Snoop Dogg Playing The Wildly Entertaining 'SOS' Is Ridiculous."
+            </p>
+            <p class="card-text">
+              <small class="text-secondary">December 24, 2018</small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- cards -->
     </div>
     <!--Page 6-->
     <div id="news">
       <!--container-->
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col-5">
             <div class="skull h-75 w-75">
               <img src="assets/skull.png" alt="" />
             </div>
           </div>
-          <div class="col me-5">
+          <div class="col me-5 ms-3">
             <h5 class="pt-5 mt-4">Want to stay in touch?</h5>
             <h2 class="">
               NEWSLETTER <br />
               SUBSCRIBE
             </h2>
-            <p class="">
+            <p class="me-5">
               In order to start receiving our news, all you have to do is enter
               your email address. Everything else will be taken care of by us.
               We will send you emails containing information about game. We
               don't spam.
             </p>
             <!-- form start -->
-            <section class="p-3 ms-0">
-              <div class="container p-1">
+            <section class="py-5 ms-0">
+              <div class="container ps-0">
                 <form class="form-floating">
                   <input
                     type="email"
                     id="floatingInputValue"
-                    class="form-control form-control-lg pb-3 bg-success bg-opacity-25 text-warning"
-                    placeholder="name@example.com"
-                    value="test@example.com"
+                    class="form-control form-control-lg me-3 bg-success bg-opacity-25 text-warning"
+                    placeholder="youremail@binar.co.id   "
+                    value="youremail@binar.co.id    "
                     aria-label="Your email address"
                     aria-describedby="basic-addon2"
                   />
                   <label for="floatingInputValue">Your email address</label>
                   <div class="input-group-append">
                     <button
-                      class="btn btn-sm btn-warning btn-outline-success my-0"
+                      class="btn btn-warning btn-outline-success px-5"
                       type="button"
                     >
                       Subscribe now!
                     </button>
                   </div>
                 </form>
-                <!-- form end-->
               </div>
             </section>
+            <!-- form end-->
           </div>
         </div>
       </div>
@@ -404,7 +506,9 @@
             </div>
           </div>
           <div class="row">
-            <div class="col border-bottom border-success pt-3 mb-3"></div>
+            <div
+              class="col-bottom-success pt-3 mb-3 border-bottom border-secondary"
+            ></div>
           </div>
           <div class="row">
             <div class="col text-success ps-0">

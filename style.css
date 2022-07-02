@@ -29,7 +29,7 @@
 
 .btn {
   font-weight: bold;
-  padding: 1rem 3rem;
+  padding: 1rem 5rem;
   color: black;
 }
 
@@ -44,6 +44,10 @@ a {
   background-image: url(assets/main-bg.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.p-title {
+  font-size: 24px;
 }
 
 .scroll-down {
@@ -61,12 +65,13 @@ a {
   background-position: center;
 }
 
-.swipe {
-  margin: 0;
-  position: relative;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+.carousel-indicators button {
+  border-radius: 50%;
+  width: 12px !important;
+  height: 12px !important;
+  margin-left: 50px !important;
+  border: 2px solid white !important;
+  background-color: transparent !important;
 }
 /* page 3 */
 #features {
@@ -148,7 +153,7 @@ a {
 }
 
 .circle2 {
-  margin-top: 7.1rem;
+  margin-top: 7rem;
 }
 
 .circle3 {
@@ -170,6 +175,92 @@ a {
   background-size: cover;
   background-position: center;
 }
+
+.container-score {
+  position: relative;
+  top: 35%;
+  left: -25%;
+  width: 30%;
+}
+
+.container-score p {
+  padding: 1rem 0;
+}
+
+.t-score {
+  height: 100vh;
+  gap: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-title {
+  margin-bottom: 30px;
+  padding: 50px;
+}
+
+.score-title h1 {
+  padding: 20px 20px 20px 0;
+  text-transform: uppercase;
+  color: white;
+  font-size: 56px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.score-title p {
+  padding: 20px 20px 20px 0;
+  color: white;
+  width: 500px;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.score-title button {
+  width: 200px;
+  height: 60px;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.card-title {
+  width: 11rem;
+}
+
+.card {
+  background: rgba(25, 26, 27, 0.8);
+  border-radius: 10px;
+  width: 450px;
+}
+.card-twitter {
+  display: inline;
+  max-width: 20px;
+  max-height: 15px;
+  left: 10rem;
+  position: relative;
+}
+
+.card-name {
+  padding-right: 13rem;
+}
+
+.main-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.top-score {
+  left: 50%;
+  position: relative;
+  max-width: 40%;
+}
+
 /* page 6 */
 #news {
   height: 150vh;
@@ -181,9 +272,21 @@ a {
 .skull {
   display: flex;
   padding-left: 15rem;
+  padding-top: 5rem;
 }
+
+.form-floating {
+  display: inline-flex;
+  width: 100%;
+}
+
+.form-floating input {
+  max-width: 60%;
+  border-color: rgba(0, 128, 0, 0.25);
+}
+
 .page-footer {
-  padding-top: 15rem;
+  padding-top: 10rem;
   max-width: 90%;
   margin-left: 5%;
   align-items: center;
@@ -233,7 +336,7 @@ p {
   font-family: "open sans";
   font-size: 14px;
 }
-/* font family */
+/* etc */
 
 ::-webkit-scrollbar {
   display: none;
