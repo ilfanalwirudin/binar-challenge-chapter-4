@@ -230,6 +230,11 @@ a {
 
 .card-title {
   width: 11rem;
+  position: absolute;
+}
+
+.card-subtitle {
+  padding-top: 1.5rem;
 }
 
 .card {
@@ -259,6 +264,21 @@ a {
   left: 50%;
   position: relative;
   max-width: 40%;
+}
+
+.profile {
+  position: relative;
+  width: 5rem;
+}
+.image {
+  width: 100%;
+  position: relative;
+}
+.ellipse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -45%);
 }
 
 /* page 6 */
