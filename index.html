@@ -71,16 +71,19 @@
         <div class="container">
           <div class="vertical-center">
             <h1>PLAY TRADITIONAL GAME</h1>
-            <p>Experience new traditional game play</p>
+            <h3>Experience new traditional game play</h3>
             <br />
-            <button type="button" class="btn btn-warning rounded-1">
+            <button
+              type="button"
+              class="btn btn-warning btn-outline-success rounded-1"
+            >
               PLAY NOW
             </button>
           </div>
           <div class="vertical-bottom">
             <div class="scroll-down" align="center">
               <h6>THE STORY</h6>
-              <a href="about"><img src="assets/scroll-down.svg" alt="" /></a>
+              <a href="#about"><img src="assets/scroll-down.svg" alt="" /></a>
             </div>
           </div>
         </div>
@@ -202,39 +205,35 @@
     </div>
     <!--Page 3-->
     <div id="features" class="features">
-      <div class="container pt-5 h-100">
-        <div class="row">
-          <div class="col"></div>
-          <div class="col">
-            <!--timeline start-->
-            <div>
-              <h5>What's so special?</h5>
-              <h2>FEATURES</h2>
-            </div>
-            <br />
-            <div class="timeline">
-              <div class="container container-timeline>
-              <div class="content">
-                <h4>TRADITIONAL GAMES</h4>
-                <p>
-                  If you miss your childhood, we provides many traditional games
-                  here
-                </p>
-              </div>
-            </div>
-            <div class="container container-timeline">
-              <div class="content">
-                <h4>GAME SUIT</h4>
-                <h4>TBD</h4>
-              </div>
+      <!-- timeline -->
+      <div class="container-features h-50">
+        <div class="feat-title">
+          <h5>What's so special ?</h5>
+          <h2>Features</h2>
+        </div>
+        <div class="container-timeline">
+          <div class="bullet features1">
+            <div class="circle1">
+              <h4>TRADITIONAL GAMES</h4>
+              <p>
+                If you miss your childhood, we provide many traditional games
+                here
+              </p>
             </div>
           </div>
-          <!--timeline end-->
+          <div class="bullet features2">
+            <div class="circle2"><h4>GAME SUIT</h4></div>
+          </div>
+          <div class="bullet features3">
+            <div class="circle3"><h4>TBD</h4></div>
+          </div>
         </div>
       </div>
+
+      <!-- timeline -->
     </div>
     <!--Page 4-->
-    <div id="requirements" class="requirements">
+    <div id="requirements" class="pt-5">
       <div class="container pt-5 h-100 ps-5">
         <div class="row pt-5 pb-5">
           <div class="col">
@@ -251,14 +250,14 @@
           <div class="col"></div>
         </div>
         <div class="row">
-          <div class="col border border-warning">
+          <div class="col border border-secondary py-3">
             <h4>OS :</h4>
             <p>
               Windows 7 64-bit only <br />
               (No OSX support at this time)
             </p>
           </div>
-          <div class="col border border-start-0 border-warning">
+          <div class="col border border-start-0 border-secondary py-3">
             <h4>PROCESSOR:</h4>
             <p>
               Intel Core 2 Duo @ 2.4 GHz or <br />
@@ -269,11 +268,11 @@
           <div class="col"></div>
         </div>
         <div class="row">
-          <div class="col border-start border-end border-warning">
+          <div class="col border-start border-end border-secondary py-3">
             <h4>MEMORY:</h4>
             <p>4 GB RAM</p>
           </div>
-          <div class="col border-end">
+          <div class="col border-end border-secondary py-3">
             <h4>STORAGE:</h4>
             <p>8 GB available space</p>
           </div>
@@ -281,7 +280,7 @@
           <div class="col"></div>
         </div>
         <div class="row">
-          <div class="col border border-warning">
+          <div class="col border border-secondary py-3">
             <h4>GRAPHICS</h4>
             <p>
               NVIDIA GeForce GTX 660 2GB or <br />
@@ -293,10 +292,13 @@
       </div>
     </div>
     <!--Page 5-->
-    <div id="quotes" class="quotes pt-5">
+    <div id="quotes" class="pt-5">
       <h2>TOP SCORES</h2>
       <p>This top scores from various games provided in this platform</p>
-      <button type="button" class="btn btn-warning px-5 rounded-1">
+      <button
+        type="button"
+        class="btn btn-warning btn-outline-success px-5 rounded-1"
+      >
         See more
       </button>
 
@@ -315,7 +317,7 @@
       </div>
     </div>
     <!--Page 6-->
-    <div class="news">
+    <div id="news">
       <!--container-->
       <div class="container">
         <div class="row">
@@ -324,7 +326,7 @@
               <img src="assets/skull.png" alt="" />
             </div>
           </div>
-          <div class="col border me-5">
+          <div class="col me-5">
             <h5 class="pt-5 mt-4">Want to stay in touch?</h5>
             <h2 class="">
               NEWSLETTER <br />
@@ -336,21 +338,21 @@
               We will send you emails containing information about game. We
               don't spam.
             </p>
-
+            <!-- form start -->
             <section class="p-3 ms-0">
               <div class="container p-1">
-                <form class="input-group">
-                  <label for="subscribe">
-                    <input
-                      type="email"
-                      id="subscribe"
-                      class="form-control form-control-lg pb-3 bg-success bg-opacity-25 text-warning"
-                      placeholder="Your email address"
-                      aria-label="Your email address"
-                      aria-describedby="basic-addon2"
-                    />
-                  </label>
-                  <div class="input-group-append ms-2">
+                <form class="form-floating">
+                  <input
+                    type="email"
+                    id="floatingInputValue"
+                    class="form-control form-control-lg pb-3 bg-success bg-opacity-25 text-warning"
+                    placeholder="name@example.com"
+                    value="test@example.com"
+                    aria-label="Your email address"
+                    aria-describedby="basic-addon2"
+                  />
+                  <label for="floatingInputValue">Your email address</label>
+                  <div class="input-group-append">
                     <button
                       class="btn btn-sm btn-warning btn-outline-success my-0"
                       type="button"
@@ -359,6 +361,7 @@
                     </button>
                   </div>
                 </form>
+                <!-- form end-->
               </div>
             </section>
           </div>

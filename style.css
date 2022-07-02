@@ -18,6 +18,48 @@
   width: 97vw;
   text-align: center;
 }
+.vertical-bottom {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  top: 135vh;
+  width: 97vw;
+  justify-content: center;
+}
+
+.btn {
+  font-weight: bold;
+  padding: 1rem 3rem;
+  color: black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* page 1 */
+.main {
+  height: 150vh;
+  background-image: url(assets/main-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.scroll-down {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 97%;
+  align-items: center;
+}
+/* page 2 */
+#about {
+  height: 150vh;
+  background-image: url(assets/the-games-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
 .swipe {
   margin: 0;
@@ -26,16 +68,120 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.btn {
-  font-weight: bold;
-  padding: 1rem 3rem;
-  color: black;
-}
-a {
-  color: inherit;
-  text-decoration: none;
+/* page 3 */
+#features {
+  height: 150vh;
+  background-image: url(assets/features.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
+.container-features {
+  padding-left: 55%;
+  max-width: 90%;
+  top: 30%;
+  position: relative;
+}
+.feat-title {
+  position: relative;
+  left: -8%;
+}
+
+.container-timeline {
+  position: relative;
+  margin: 0 auto;
+}
+
+.container-timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: -2.3%;
+  margin-left: -20px;
+  margin-top: 15px;
+  height: 189px;
+}
+
+.bullet::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -40px;
+  background-color: white;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.features2::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -40px;
+  border: 2px solid white;
+  top: 202px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.features3::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -40px;
+  background-color: transparent;
+  border: 2px solid white;
+  top: 280px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.circle1 {
+  margin-top: 4rem;
+  padding-top: 1rem;
+}
+
+.circle2 {
+  margin-top: 7.1rem;
+}
+
+.circle3 {
+  margin-top: 3.7rem;
+}
+
+/* page 4 */
+#requirements {
+  height: 150vh;
+  background-image: url(assets/requirements.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* page 5 */
+#quotes {
+  height: 150vh;
+  background-image: url(assets/top-score-bg.png);
+  background-size: cover;
+  background-position: center;
+}
+/* page 6 */
+#news {
+  height: 150vh;
+  background-image: url(assets/newsletter.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.skull {
+  display: flex;
+  padding-left: 15rem;
+}
 .page-footer {
   padding-top: 15rem;
   max-width: 90%;
@@ -48,15 +194,6 @@ a {
   padding-left: 10%;
 }
 
-.vertical-bottom {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  top: 135vh;
-  width: 97vw;
-  justify-content: center;
-}
-
 .vertical-footer-bottom {
   display: flex;
   position: absolute;
@@ -65,14 +202,7 @@ a {
   justify-content: center;
 }
 
-.scroll-down {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 97%;
-  align-items: center;
-}
-
+/* font family */
 h1 {
   font-family: "Bebas Neue";
   font-size: 80px;
@@ -80,7 +210,7 @@ h1 {
 
 h2 {
   font-family: "Bebas Neue";
-  font-size: 36px;
+  font-size: 60px;
 }
 
 h3 {
@@ -103,52 +233,7 @@ p {
   font-family: "open sans";
   font-size: 14px;
 }
-
-.main {
-  height: 150vh;
-  background-image: url(assets/main-bg.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.about {
-  height: 150vh;
-  background-image: url(assets/the-games-bg.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.features {
-  height: 150vh;
-  background-image: url(assets/features.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.requirements {
-  height: 150vh;
-  background-image: url(assets/requirements.png);
-  background-size: cover;
-  background-position: center;
-}
-
-.quotes {
-  height: 150vh;
-  background-image: url(assets/top-score-bg.png);
-  background-size: cover;
-  background-position: center;
-}
-.news {
-  height: 150vh;
-  background-image: url(assets/newsletter.png);
-  background-size: cover;
-  background-position: center;
-}
-
-.skull {
-  display: flex;
-  padding-left: 15rem;
-}
+/* font family */
 
 ::-webkit-scrollbar {
   display: none;
