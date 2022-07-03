@@ -38,6 +38,34 @@ a {
   background-position: center;
 }
 
+.navbar .navbar-nav .nav-link {
+  color: white;
+  font-size: 1.1em;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: white;
+}
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
+  width: 0%;
+  content: "";
+  height: 3px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+
 .p-title {
   font-size: 24px;
 }
