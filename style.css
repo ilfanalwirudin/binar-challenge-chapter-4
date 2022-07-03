@@ -15,16 +15,8 @@
   padding: 0;
   position: absolute;
   top: 50vh;
-  width: 97vw;
+  width: 98vw;
   text-align: center;
-}
-.vertical-bottom {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  top: 135vh;
-  width: 97vw;
-  justify-content: center;
 }
 
 .btn {
@@ -51,12 +43,18 @@ a {
 }
 
 .scroll-down {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 97%;
+  display: flex;
+  flex-direction: column;
+  top: 135vh;
+  width: 98vw;
   align-items: center;
+  position: absolute;
 }
+
+.scroll-down-icon {
+  padding-left: 2.2rem;
+}
+
 /* page 2 */
 #about {
   height: 150vh;
@@ -306,7 +304,7 @@ a {
 }
 
 .page-footer {
-  padding-top: 10rem;
+  padding-top: 7rem;
   max-width: 90%;
   margin-left: 5%;
   align-items: center;

@@ -21,7 +21,9 @@
     <!--Page 1-->
     <div id="main" class="main">
       <!--Navbar start-->
-      <nav class="navbar navbar-expand-lg bg-dark opacity-75">
+      <nav
+        class="navbar navbar-expand-lg bg-dark opacity-75 position-fixed w-100"
+      >
         <div class="container-fluid">
           <a class="navbar-brand text-white" href="#">
             <img class="logo w-25" src="assets/icon.ico" alt=""
@@ -80,19 +82,21 @@
             <h1>PLAY TRADITIONAL GAME</h1>
             <p class="p-title">Experience new traditional game play</p>
             <br />
-            <button
-              type="button"
-              class="btn btn-warning btn-outline-success rounded-1"
-            >
-              PLAY NOW
-            </button>
+            <a href="#">
+              <button
+                type="button"
+                class="btn btn-warning btn-outline-success rounded-1"
+              >
+                PLAY NOW
+              </button>
+            </a>
           </div>
           <!-- story -->
-          <div class="vertical-bottom">
-            <div class="scroll-down" align="center">
+          <div class="scroll-down">
+            <a href="#about">
               <h6>THE STORY</h6>
-              <a href="#about"><img src="assets/scroll-down.svg" alt="" /></a>
-            </div>
+              <img class="scroll-down-icon" src="assets/scroll-down.svg" alt=""
+            /></a>
           </div>
         </div>
       </header>
@@ -100,7 +104,7 @@
     <!--Page 2-->
     <div id="about" class="about">
       <!-- grid 1 -->
-      <div class="container">
+      <div class="container pt-5">
         <div class="row">
           <div class="col-4 pt-5 ps-5">
             <h5>What's so special?</h5>
@@ -330,12 +334,14 @@
       <div class="container container-score">
         <h2>TOP SCORES</h2>
         <p>This top scores from various games provided in this platform</p>
-        <button
-          type="button"
-          class="btn btn-warning btn-outline-success rounded-1"
+        <a href="#">
+          <button
+            type="button"
+            class="btn btn-warning btn-outline-success rounded-1"
+          >
+            See more
+          </button></a
         >
-          See more
-        </button>
       </div>
       <!-- card -->
       <div class="top-score ps-5 ms-5">
@@ -442,7 +448,7 @@
     <!--Page 6-->
     <div id="news">
       <!--container-->
-      <div class="container">
+      <div class="container pt-5">
         <div class="row">
           <div class="col-5">
             <div class="skull h-75 w-75">
