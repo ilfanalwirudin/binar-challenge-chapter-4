@@ -125,7 +125,7 @@ nav,
   transform: translate(0, 5px);
 }
 
-.active-choice {
+.active_choice {
   background-color: var(--btn-hover) !important;
 }
 
