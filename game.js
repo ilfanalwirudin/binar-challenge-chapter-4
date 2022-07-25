@@ -1,5 +1,4 @@
 // Abstract Class
-
 class Janken {
   constructor() {
     this.rock = document.getElementsByClassName("rock");
@@ -14,7 +13,7 @@ const Computer = (Base) =>
   };
 
 // Inheritance
-class Player extends Janken {
+class Player_1 extends Janken {
   constructor(rock, paper, scissors) {
     super(rock, paper, scissors);
     this.#initiation();
@@ -29,7 +28,7 @@ class Player extends Janken {
 }
 
 // Polymorphism
-class Com extends Computer(Janken) {
+class Player_2 extends Computer(Janken) {
   constructor(rock, paper, scissors) {
     super(rock, paper, scissors);
     this.#initiation();
@@ -46,7 +45,7 @@ class Rules {
   constructor() {
     this.resultText = document.createElement("H1");
     this.resultContainer = document.getElementById("vs_result");
-    this.player_choice;
+    this.user_choice;
     this.com_choice;
   }
 
@@ -86,23 +85,23 @@ class Rules {
     this.logger("Result : Draw, GG !");
   };
 
-  decision = (playerChoice, botChoice) => {
+  decision = (userChoice, botChoice) => {
     if (
-      (playerChoice === "rock" && botChoice === "rock") ||
-      (playerChoice === "paper" && botChoice === "paper") ||
-      (playerChoice === "scissors" && botChoice === "scissors")
+      (userChoice === "rock" && botChoice === "rock") ||
+      (userChoice === "paper" && botChoice === "paper") ||
+      (userChoice === "scissors" && botChoice === "scissors")
     ) {
       return this._drawResult();
     } else if (
-      (playerChoice === "rock" && botChoice === "scissors") ||
-      (playerChoice === "paper" && botChoice === "rock") ||
-      (playerChoice === "scissors" && botChoice === "paper")
+      (userChoice === "rock" && botChoice === "scissors") ||
+      (userChoice === "paper" && botChoice === "rock") ||
+      (userChoice === "scissors" && botChoice === "paper")
     ) {
       return this._winResult();
     } else if (
-      (playerChoice === "rock" && botChoice === "paper") ||
-      (playerChoice === "paper" && botChoice === "scissors") ||
-      (playerChoice === "scissors" && botChoice === "rock")
+      (userChoice === "rock" && botChoice === "paper") ||
+      (userChoice === "paper" && botChoice === "scissors") ||
+      (userChoice === "scissors" && botChoice === "rock")
     ) {
       return this._loseResult();
     }
@@ -110,23 +109,23 @@ class Rules {
 }
 
 class Game extends Rules {
-  constructor(player_choice, com_choice) {
-    super(player_choice, com_choice);
+  constructor(user_choice, com_choice) {
+    super(user_choice, com_choice);
     this.resetResult = document.getElementById("reset");
     this.#initiation();
   }
 
   #initiation() {
-    this.player = new Player();
-    this.com = new Com();
+    this.user = new Player_1();
+    this.com = new Player_2();
     this._defaultState();
     this.resetButton();
   }
 
-  getPlayerPick = (choice) => {
-    this.player_choice = choice;
-    this.logger(`Player choose: ${this.player_choice}`);
-    return this.player_choice;
+  getUserPick = (choice) => {
+    this.user_choice = choice;
+    this.logger(`Player choose: ${this.user_choice}`);
+    return this.user_choice;
   };
 
   getComPick = (choice) => {
@@ -136,29 +135,29 @@ class Game extends Rules {
   };
 
   setPlayerListener = () => {
-    this.player.rock[0].onclick = () => {
-      this.getplayerPick("rock");
-      this.player.rock[0].classList.add("active_choice");
-      this.player.paper[0].classList.remove("active_choice");
-      this.player.scissors[0].classList.remove("active_choice");
+    this.user.rock[0].onclick = () => {
+      this.getUserPick("rock");
+      this.user.rock[0].classList.add("active_choice");
+      this.user.paper[0].classList.remove("active_choice");
+      this.user.scissors[0].classList.remove("active_choice");
       this.removePlayerListener();
       this.decideResult();
     };
 
-    this.player.paper[0].onclick = () => {
-      this.getplayerPick("paper");
-      this.player.rock[0].classList.remove("active_choice");
-      this.player.paper[0].classList.add("active_choice");
-      this.player.scissors[0].classList.remove("active_choice");
+    this.user.paper[0].onclick = () => {
+      this.getUserPick("paper");
+      this.user.rock[0].classList.remove("active_choice");
+      this.user.paper[0].classList.add("active_choice");
+      this.user.scissors[0].classList.remove("active_choice");
       this.removePlayerListener();
       this.decideResult();
     };
 
-    this.player.scissors[0].onclick = () => {
-      this.getplayerPick("scissors");
-      this.player.rock[0].classList.remove("active_choice");
-      this.player.paper[0].classList.remove("active_choice");
-      this.player.scissors[0].classList.add("active_choice");
+    this.user.scissors[0].onclick = () => {
+      this.getUserPick("scissors");
+      this.user.rock[0].classList.remove("active_choice");
+      this.user.paper[0].classList.remove("active_choice");
+      this.user.scissors[0].classList.add("active_choice");
       this.removePlayerListener();
       this.decideResult();
     };
@@ -197,10 +196,10 @@ class Game extends Rules {
 
   result = () => {
     setInterval(() => {
-      if (this.player_choice && this.com_choice) {
-        this.decision(this.player_choice, this.com_choice);
+      if (this.user_choice && this.com_choice) {
+        this.decision(this.user_choice, this.com_choice);
       }
-      this.player_choice = null;
+      this.user_choice = null;
       this.com_choice = null;
     }, 400);
   };
@@ -228,9 +227,9 @@ class Game extends Rules {
     this.resetResult.onclick = () => {
       this.logger("Game restarted !");
       this._defaultState();
-      document.querySelectorAll(".choice").forEach((playerButton) => {
-        playerButton.classList.remove("active_choice");
-        playerButton.disabled = false;
+      document.querySelectorAll(".choice").forEach((userButton) => {
+        userButton.classList.remove("active_choice");
+        userButton.disabled = false;
       });
     };
   }

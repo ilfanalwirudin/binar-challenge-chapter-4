@@ -31,17 +31,6 @@ body {
   font-size: 4rem;
 }
 
-/* img {
-  width: 128px;
-  height: 128px;
-} */
-
-/* .container {
-  max-width: none;
-  display: inline-flex;
-  position: absolute;
-} */
-
 .logo {
   display: flex;
   width: 72px;
@@ -94,14 +83,22 @@ nav,
   min-width: 5rem;
 }
 
-.janken-choice {
+.title_text h1 {
+  font-size: 0.5em;
+  line-height: 49px;
+  text-align: center;
+  color: var(--nav);
+  text-shadow: 2px 1px #000000;
+}
+
+.janken_choice {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 0.5rem;
   justify-content: center;
 }
 
-.user-choice button {
+.janken_choice button {
   background: unset;
   border: unset;
   max-width: 9rem;
@@ -137,7 +134,7 @@ nav,
   padding: 1rem;
 }
 
-.janken-choice h2 {
+.janken-title h2 {
   font-size: 0.5em;
   line-height: 49px;
   text-align: center;
@@ -155,7 +152,7 @@ nav,
   z-index: 99;
 }
 
-.versus {
+.versus h1 {
   color: rgba(189, 0, 0, 1);
   font-size: 1.5em;
   text-align: center;
