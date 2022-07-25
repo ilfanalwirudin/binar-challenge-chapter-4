@@ -17,7 +17,7 @@
   </head>
   <body>
     <header>
-      <nav class="border">
+      <nav>
         <div class="back-button">
           <a href="index.html"></a>
         </div>
@@ -27,82 +27,98 @@
         <div><h1>ROCK PAPER SCISSORS</h1></div>
       </nav>
     </header>
-    <div class="container">
+
+    <div class="main">
       <div class="janken">
-        <div class="player">PLAYER</div>
-        <div class="rock">
-          <button>
-            <img
-              height="128px"
-              width="128px"
-              src="/assets/batu.png"
-              alt="rock"
-            />
-          </button>
+        <div class="janken-title">
+          <h2>PLAYER</h2>
         </div>
-        <div class="paper">
-          <button>
-            <img
-              height="128px"
-              width="128px"
-              src="/assets/kertas.png"
-              alt="paper"
-            />
-          </button>
-        </div>
-        <div class="scissors">
-          <button>
-            <img
-              height="128px"
-              width="128px"
-              src="/assets/gunting.png"
-              alt="scissors"
-            />
-          </button>
+        <div class="janken-choice">
+          <div class="rock">
+            <button>
+              <img
+                height="128px"
+                width="128px"
+                src="/assets/batu.png"
+                alt="rock"
+              />
+            </button>
+          </div>
+          <div class="paper">
+            <button>
+              <img
+                height="128px"
+                width="128px"
+                src="/assets/kertas.png"
+                alt="paper"
+              />
+            </button>
+          </div>
+          <div class="scissors">
+            <button>
+              <img
+                height="128px"
+                width="128px"
+                src="/assets/gunting.png"
+                alt="scissors"
+              />
+            </button>
+          </div>
         </div>
       </div>
-      <div class="middle">
+
+      <div class="versus">
         <h2 class="versus">VS</h2>
-        <button>
+      </div>
+
+      <div class="janken">
+        <div class="janken-title">
+          <h2>COM</h2>
+        </div>
+        <div class="janken-choice">
+          <div class="rock">
+            <button>
+              <img
+                height="128px"
+                width="128px"
+                src="/assets/batu.png"
+                alt="rock"
+              />
+            </button>
+          </div>
+          <div class="paper">
+            <button>
+              <img
+                height="128px"
+                width="128px"
+                src="/assets/kertas.png"
+                alt="paper"
+              />
+            </button>
+          </div>
+          <div class="scissors">
+            <button>
+              <img
+                height="128px"
+                width="128px"
+                src="/assets/gunting.png"
+                alt="scissors"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- reset start -->
+      <div class="reset">
+        <button id="reset" type="reset">
           <img
-            height="128px"
-            width="128px"
-            src="/assets/refresh.png"
-            alt="refresh"
+            loading="lazy"
+            width="68px"
+            height="68px"
+            src="assets/refresh.png"
+            alt="reset"
           />
         </button>
-      </div>
-      <div class="janken">
-        <div class="rock">
-          <button>
-            <img
-              height="128px"
-              width="128px"
-              src="/assets/batu.png"
-              alt="rock"
-            />
-          </button>
-        </div>
-        <div class="paper">
-          <button>
-            <img
-              height="128px"
-              width="128px"
-              src="/assets/kertas.png"
-              alt="paper"
-            />
-          </button>
-        </div>
-        <div class="scissors">
-          <button>
-            <img
-              height="128px"
-              width="128px"
-              src="/assets/gunting.png"
-              alt="scissors"
-            />
-          </button>
-        </div>
       </div>
     </div>
     <script
@@ -121,5 +137,8 @@
       integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
       crossorigin="anonymous"
     ></script>
+    <script src="game.js"></script>
   </body>
 </html>
+
+<!-- Copyright of Ilfan Alwirudin 2022 -->

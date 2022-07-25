@@ -1,77 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap");
+
+:root {
+  --nav: rgba(249, 178, 61, 1);
+  --bg: rgba(156, 131, 95, 1);
+  --btn-hover: rgba(196, 196, 196, 1);
+  --skin: rgb(249, 211, 186);
+  --black: rgba(51, 44, 43, 1);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background-color: bisque;
-  height: 100vh;
-  width: 100vw;
+h1,
+h2,
+h3 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  margin: 0;
 }
 
-.container {
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+}
+
+/* img {
+  width: 128px;
+  height: 128px;
+} */
+
+/* .container {
   max-width: none;
   display: inline-flex;
   position: absolute;
-}
+} */
 
 .logo {
-  position: absolute;
+  display: flex;
   width: 72px;
   height: 72px;
 }
 
-.back-button {
-  position: absolute;
-  width: 55px;
-  height: 87px;
-
-  font-family: "Open Sans";
-  font-weight: 700;
-  font-size: 72px;
-  letter-spacing: 10%;
-  line-height: 98px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #724c21;
-}
-
-.title {
-  position: absolute;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  text-align: center;
-  color: #f9b23d;
-}
-
 nav {
-  display: inline-flex;
-  position: absolute;
+  margin: 1rem;
 }
 
-a {
+.title div {
+  margin: 0 1rem;
+}
+
+.back-button a {
   text-decoration: none;
 }
 
-.img {
-  width: 30px;
-  height: 30px;
+.back-button h2 {
+  font-size: 1em;
+  line-height: 98px;
+  letter-spacing: 0.1em;
+  color: rgba(114, 76, 33, 1);
+}
+
+.title {
+  font-size: 0.5em;
+  line-height: 49px;
+  text-align: center;
+  color: var(--nav);
+  text-shadow: 2px 1px #000000;
+}
+
+nav,
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  position: relative;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.janken {
+  align-self: center;
+  width: 100%;
+  min-width: 5rem;
+}
+
+.janken-choice {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 0.5rem;
+  justify-content: center;
+}
+
+.user-choice button {
+  background: unset;
+  border: unset;
+  max-width: 9rem;
+  width: 100%;
+  min-width: 4rem;
+  padding: 1rem 1rem;
+  border-radius: 10%;
+}
+
+.janken:nth-child(1) button:hover {
+  background-color: var(--skin);
+}
+
+.janken button:enabled {
+  animation: wave 1s;
+}
+
+.janken:nth-child(3) button {
+  cursor: default;
+}
+
+.janken:nth-child(1) button:active,
+.reset button:active {
+  transform: translate(0, 5px);
+}
+
+.active-choice {
+  background-color: var(--btn-hover) !important;
+}
+
+.janken-title {
+  text-align: center;
+  padding: 1rem;
+}
+
+.janken-choice h2 {
+  font-size: 0.5em;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  border-bottom: 0.5rem dashed var(--skin);
 }
 
 .versus {
-  position: absolute;
-  width: 296px;
-  height: 186px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 144px;
-  line-height: 196px;
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  z-index: 99;
+}
+
+.versus {
+  color: rgba(189, 0, 0, 1);
+  font-size: 1.5em;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.versus_result {
+  background-color: rgba(76, 150, 84, 1);
+  border-radius: 10px;
+  height: 10rem;
+  transform: rotate(-28.87deg);
+}
+
+.versus_result h1 {
+  margin: auto;
+  color: white;
+  font-size: 38px;
+  line-height: 52px;
   text-align: center;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #bd0000;
+}
+
+.draw {
+  background-color: rgb(3, 91, 12);
+}
+
+.reset {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.reset button {
+  margin: auto;
+  padding: 0;
+  display: flex;
+  background: unset;
+  border: unset;
+  width: 5rem;
+}
+
+.reset button:hover {
+  animation: rotate 1s normal;
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes wave {
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
 }
