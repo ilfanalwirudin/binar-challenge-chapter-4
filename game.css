@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  max-width: none;
+  display: inline-flex;
+  position: absolute;
+}
+
+.logo {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+}
+
+.back-button {
+  position: absolute;
+  width: 55px;
+  height: 87px;
+
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 72px;
+  letter-spacing: 10%;
+  line-height: 98px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #724c21;
+}
+
+.title {
+  position: absolute;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  color: #f9b23d;
+}
+
+nav {
+  display: inline-flex;
+  position: absolute;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+}
+
+.versus {
+  position: absolute;
+  width: 296px;
+  height: 186px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 144px;
+  line-height: 196px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #bd0000;
+}
